@@ -1,5 +1,4 @@
-FROM loadimpact/k6:0.20.0
-
+FROM grafana/k6:latest
 USER root
 
 WORKDIR /root/

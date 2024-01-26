@@ -1,0 +1,5 @@
+#!/bin/bash
+script=$1
+docker pull grafana/k6
+
+docker run --rm -v $(pwd)/errors.csv:/errors.csv -v $(pwd)/status.csv:/status.csv -i grafana/k6 run - < $script
